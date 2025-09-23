@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Document</title>
 </head>
+
 <body>
-    <h1>halo ini branch feature</h1>
-    <p>ini lanjutan dari ngetes branch feature</p>
-    <p>ini tes ketiga biar pinter</p>
+    <nav class="bg-stone-100 shadow-xl z-100">
+        <div class="max-w-8xl mx- px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center text-2xl font-bold text-blue-600">
+                    khai.co
+                </div>
+
+                <!-- Menu desktop -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600">About</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600">Services</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600">Contact</a>
+                </div>
+
+                <!-- Hamburger button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        ☰
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu mobile -->
+        <div id="menu" class="hidden md:hidden px-4 pb-3 space-y-2">
+            <a href="#" class="block text-gray-700 hover:text-blue-600">Home</a>
+            <a href="#" class="block text-gray-700 hover:text-blue-600">About</a>
+            <a href="#" class="block text-gray-700 hover:text-blue-600">Services</a>
+            <a href="#" class="block text-gray-700 hover:text-blue-600">Contact</a>
+        </div>
+
+        <section class="bg-[url('/img/hero_background.jpg')] bg-start text-white h-170 flex items-center justify-center flex-col">
+            <h1 id="welcome-text" class="text-4xl md:text-6xl font-bold mb-4">
+                Hi, Nama! 
+            </h1>
+            <p class="text-lg md:text-2xl">Welcome to Khairan's company profile</p>
+        </section>
+
+
+        <script src="/js/script.js"></script>
 </body>
+
 </html>
