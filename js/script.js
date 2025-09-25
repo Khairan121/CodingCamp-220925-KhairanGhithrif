@@ -23,10 +23,8 @@ function setWelcomeText(nama) {
     setWelcomeText(nama);
   };
 
-  document.getElementById("resetLink").addEventListener("click", function (e) {
-    e.preventDefault();
+  function resetNama() {
     localStorage.removeItem("namaUser");
-
     const namaBaru = prompt("Enter your name here:");
     if (namaBaru) {
       localStorage.setItem("namaUser", namaBaru);
@@ -34,6 +32,17 @@ function setWelcomeText(nama) {
     } else {
       setWelcomeText("Guest");
     }
+  }
+
+  // event listener untuk dua link
+  document.getElementById("resetLinkDesktop").addEventListener("click", function (e) {
+    e.preventDefault();
+    resetNama();
+  });
+
+  document.getElementById("resetLinkMobile").addEventListener("click", function (e) {
+    e.preventDefault();
+    resetNama();
   });
 
 const form = document.getElementById("contactForm");
