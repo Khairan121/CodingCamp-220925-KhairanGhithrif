@@ -24,3 +24,4 @@ form.addEventListener("submit", function (e) {
   document.getElementById("outKelamin").textContent = 'Gender: '+kelamin;
   document.getElementById("outPesan").innerHTML = 'Commenting:<br>'+ pesan;
 });
+

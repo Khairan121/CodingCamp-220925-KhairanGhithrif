@@ -1,11 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <nav class="bg-stone-100 shadow-md z-50 sticky top-0 ">
+        <div class="max-w-8xl mx- px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex-shrink-0 flex items-center text-2xl font-bold text-blue-600">
+                    khai.co
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="profile.html" class="text-gray-700 hover:text-blue-600">About</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600">Services</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        ☰
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="menu" class="hidden md:hidden px-4 pb-3 space-y-2">
+            <a href="index.html" class="block text-gray-700 hover:text-blue-600">Home</a>
+            <a href="profile.html" class="block text-gray-700 hover:text-blue-600">About</a>
+            <a href="#" class="block text-gray-700 hover:text-blue-600">Services</a>
+            <a href="#" class="block text-gray-700 hover:text-blue-600">Contact</a>
+        </div>
+    </nav>
+
+    <section
+        class="bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(/img/hero_profile.jpg)] text-white py-20 px-10 text-center">
+        <h1 class="text-5xl font-bold mb-5">About <span class="text-blue-400">khai.co</span></h1>
+        <p class="text-lg max-w-2xl mx-auto">We are Indonesia’s leading website development company. With over 1,000
+            clients in just one year, we are committed to helping businesses build a stronger and more professional
+            digital presence
+        </p>
+    </section>
+    <section class="py-20 px-8 bg-gradient-to-r from-blue-50 via-white to-blue-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-extrabold mb-8 text-gray-800">
+                Our Story
+            </h2>
+            <p class="text-lg leading-relaxed text-gray-700">
+                <span class="font-semibold text-blue-600">khai.co</span> was founded with a simple vision:
+                <span class="font-bold">to help everyone build high-quality websites</span> without unnecessary
+                complexity.
+                In a short period of time, we have earned the trust of
+                <span class="font-semibold">over 1,000 clients</span> — ranging from small
+                businesses and startups
+                to large enterprises.
+            </p>
+            <p class="mt-6 text-lg leading-relaxed text-gray-700">
+                For us, a website is more than just design.
+                <span class="italic font-semibold text-blue-700">It is a digital identity</span> that empowers your
+                business
+                to achieve greater recognition and growth
+            </p>
+        </div>
+    </section>
+
+
+    <section class="bg-gray-100 py-20 px-10">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mt-2">What We Offer</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mt-4">
+                From idea to launch, khai.co provides complete digital solutions that help your business stand out
+                online.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+            <div class="p-8 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
+                <div
+                    class="w-16 h-16 mx-auto flex items-center justify-center bg-blue-100 text-blue-600 rounded-full mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Website Development</h3>
+                <p class="text-gray-600">From frontend, backend, to fullstack — we build websites that are fast, modern,
+                    and scalable.</p>
+            </div>
+
+            <div class="p-8 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
+                <div
+                    class="w-16 h-16 mx-auto flex items-center justify-center bg-purple-100 text-purple-600 rounded-full mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9.75 17L6 12.75m0 0L9.75 8.5M6 12.75h12" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">UI/UX & Mockup</h3>
+                <p class="text-gray-600">Modern, responsive, and user-friendly designs tailored to your business needs.
+                </p>
+            </div>
+
+            <div class="p-8 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
+                <div
+                    class="w-16 h-16 mx-auto flex items-center justify-center bg-green-100 text-green-600 rounded-full mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Domain & Maintenance</h3>
+                <p class="text-gray-600">From domain setup to ongoing maintenance, we ensure your website stays online
+                    and secure.</p>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 px-10 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+            <div class="p-8 rounded-2xl bg-white/10 backdrop-blur-md shadow-lg hover:scale-105 transition duration-300">
+                <h3 class="text-5xl font-bold text-yellow-300">1000+</h3>
+                <p class="mt-3 text-lg">Satisfied Clients</p>
+            </div>
+            <div class="p-8 rounded-2xl bg-white/10 backdrop-blur-md shadow-lg hover:scale-105 transition duration-300">
+                <h3 class="text-5xl font-bold text-green-300">1 Year</h3>
+                <p class="mt-3 text-lg">Outstanding Experience</p>
+            </div>
+            <div class="p-8 rounded-2xl bg-white/10 backdrop-blur-md shadow-lg hover:scale-105 transition duration-300">
+                <h3 class="text-5xl font-bold text-pink-300">99%</h3>
+                <p class="mt-3 text-lg">Client Satisfaction</p>
+            </div>
+
+        </div>
+    </section>
+    <section class="py-20 px-10 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold">Why Choose Us?</h2>
+            <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                We don’t just build websites — we build digital experiences. Here’s why hundreds of businesses trust
+                khai.co:
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div
+                class="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+                <div class="w-12 h-12 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full text-2xl">
+                    ✅</div>
+                <div>
+                    <h3 class="font-semibold text-xl">Quality & Client Satisfaction</h3>
+                    <p class="text-gray-600">We prioritize delivering top-quality websites while ensuring client
+                        happiness every step of the way.</p>
+                </div>
+            </div>
+
+            <div
+                class="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+                <div
+                    class="w-12 h-12 flex items-center justify-center bg-purple-100 text-purple-600 rounded-full text-2xl">
+                    ⚡</div>
+                <div>
+                    <h3 class="font-semibold text-xl">Young & Creative Team</h3>
+                    <p class="text-gray-600">A passionate team that stays up-to-date with the latest trends and
+                        technologies.</p>
+                </div>
+            </div>
+
+            <div
+                class="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+                <div
+                    class="w-12 h-12 flex items-center justify-center bg-green-100 text-green-600 rounded-full text-2xl">
+                    🌐</div>
+                <div>
+                    <h3 class="font-semibold text-xl">All-in-One Solution</h3>
+                    <p class="text-gray-600">From concept to launch, we handle everything so you can focus on your
+                        business.</p>
+                </div>
+            </div>
+
+            <div
+                class="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+                <div class="w-12 h-12 flex items-center justify-center bg-pink-100 text-pink-600 rounded-full text-2xl">
+                    🤝</div>
+                <div>
+                    <h3 class="font-semibold text-xl">Friendly After-Sales Support</h3>
+                    <p class="text-gray-600">Our support team is always ready to help you, even after your website goes
+                        live.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="w-full h-auto p-5 bg-blue-500 md:hidden">
+        <div class="w-full h-auto bg-blue-500 md:hidden flex">
+            <div class="w-[50%] h-fit max-h-40 flex flex-col flex-wrap gap-1">
+                <p class="text-lg font-bold text-stone-100">Resource</p>
+                <a href="#" class="text-stone-100 text-sm">Home</a>
+                <a href="#" class="text-stone-100 text-sm">About</a>
+                <a href="#" class="text-stone-100 text-sm">Services</a>
+                <a href="#" class="text-stone-100 text-sm">Contact</a>
+            </div>
+            <div class="w-[50%] h-fit max-h-30 flex justify-evenly flex-wrap">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/instagram-circle.png"
+                    alt="instagram-circle" />
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/facebook-new.png"
+                    alt="facebook-new" />
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/linkedin.png"
+                    alt="linkedin" />
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/github.png" alt="github" />
+            </div>
+        </div>
+
+        <h1 class="text-4xl font-bold text-stone-100 text-right">khai.co</h1>
+        <p class="text-xs text-stone-100 text-right">©2025 Khairan Ghithrif</p>
+    </footer>
+
+
+    <footer class="hidden md:block w-full h-auto bg-blue-500 p-5 px-10">
+        <hr class="border-t-2 border-gray-200 m-4">
+        <div class="w-full h-auto flex justify-between">
+            <div class="w-[100%] h-auto  flex flex-col justify-center items-center gap-2">
+                <div class="flex w-auto gap-10 pb-5 ">
+                    <a href="#" class="text-stone-100 text-xl">About</a>
+                    <a href="#" class="text-stone-100 text-xl">Services</a>
+                    <a href="#" class="text-stone-100 text-xl">Home</a>
+                    <a href="#" class="text-stone-100 text-xl">Contact</a>
+                </div>
+                <div class="flex w-auto gap-10">
+                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/instagram-circle.png"
+                        alt="instagram-circle" />
+                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/facebook-new.png"
+                        alt="facebook-new" />
+                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/linkedin.png"
+                        alt="linkedin" />
+                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/github.png"
+                        alt="github" />
+                </div>
+                <h1 class="text-5xl font-bold text-stone-100 pt-5">khai.co</h1>
+                <p class="text-xs text-stone-100 text-right">©2025 Khairan Ghithrif</p>
+            </div>
+
+
+        </div>
+    </footer>
+
+
+    <script src="/js/script.js"></script>
 </body>
+
 </html>
