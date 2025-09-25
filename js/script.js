@@ -4,9 +4,37 @@ btn.addEventListener("click", () => {
   menu.classList.toggle("hidden");
 });
 
+function setWelcomeText(nama) {
+    document.getElementById("welcome-text").textContent = `${nama}!`;
+  }
 
-const nama = "User";
-document.getElementById("welcome-text").textContent = `${nama}!`;
+  window.onload = function () {
+    let nama = localStorage.getItem("namaUser");
+
+    if (!nama) {
+      nama = prompt("Enter your name here:");
+      if (nama) {
+        localStorage.setItem("namaUser", nama);
+      } else {
+        nama = "Guest";
+      }
+    }
+
+    setWelcomeText(nama);
+  };
+
+  document.getElementById("resetLink").addEventListener("click", function (e) {
+    e.preventDefault();
+    localStorage.removeItem("namaUser");
+
+    const namaBaru = prompt("Enter your name here:");
+    if (namaBaru) {
+      localStorage.setItem("namaUser", namaBaru);
+      setWelcomeText(namaBaru);
+    } else {
+      setWelcomeText("Guest");
+    }
+  });
 
 const form = document.getElementById("contactForm");
 
@@ -21,7 +49,7 @@ form.addEventListener("submit", function (e) {
   document.getElementById("outTime").textContent = new Date().toLocaleString();
   document.getElementById("outNama").textContent = nama;
   document.getElementById("outTanggal").textContent = 'Birth: ' + tanggal;
-  document.getElementById("outKelamin").textContent = 'Gender: '+kelamin;
-  document.getElementById("outPesan").innerHTML = 'Commenting:<br>'+ pesan;
+  document.getElementById("outKelamin").textContent = 'Gender: ' + kelamin;
+  document.getElementById("outPesan").innerHTML = 'Commenting:<br>' + pesan;
 });
 
